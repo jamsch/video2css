@@ -1,8 +1,10 @@
 # video2css
 
-video2css allows you to convert a video file to CSS using either box shadows or base64 image backgrounds.
+video2css allows you to convert a video file to a CSS animation using either box shadows or base64 image backgrounds.
 
 ## Installation
+
+**Prerequisites**: `ffmpeg` installed and in your PATH.
 
 1. `npm i`
 2. `node video2css.css --file video.mp4 --fps 5 --seconds 10`
