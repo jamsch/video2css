@@ -1,0 +1,20 @@
+{
+  "name": "video2css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "video2css.js",
+  "scripts": {
+    "start": "node video2css.js",
+    "cut": "ffmpeg -i file.mkv -ss 00:00:05 -r 10 -vf scale=320:-1 output/$filename%03d.jpg",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jamsch",
+  "license": "ISC",
+  "dependencies": {
+    "args": "^5.0.0",
+    "chalk": "^2.4.1",
+    "clean-css": "^4.2.1",
+    "get-pixels": "^3.3.2",
+    "jimp": "^0.3.11"
+  }
+}
