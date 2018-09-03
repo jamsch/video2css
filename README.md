@@ -7,7 +7,7 @@ video2css allows you to convert a video file to a CSS animation using either box
 **Prerequisites**: `ffmpeg` installed and in your PATH.
 
 1. `npm i`
-2. `node video2css.css --file video.mp4 --fps 5 --seconds 10`
+2. `node video2css.js --file video.mp4 --fps 5 --seconds 10`
 
 ## Commands
 
