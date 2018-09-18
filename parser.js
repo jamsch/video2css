@@ -15,6 +15,15 @@ function pad(n, width) {
   return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 }
 
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? '0' + hex : hex;
+}
+
+function rgbToHex({ r, g, b }) {
+  return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 /**
  * Creates a box-shadow representation of an image
  * @param {string} path File path
@@ -26,7 +35,7 @@ async function getBoxShadowFromImage(path, quality) {
   for (let x = 0; x < width; x += quality) {
     for (let y = 0; y < height; y += quality) {
       const rgba = Jimp.intToRGBA(image.getPixelColor(x, y));
-      boxShadow += `${x}px ${y}px rgb(${rgba.r}, ${rgba.g}, ${rgba.b}), `;
+      boxShadow += `${x}px ${y}px ${rgbToHex(rgba)}, `;
     }
   }
 

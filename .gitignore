@@ -1,4 +1,5 @@
 node_modules/
-decoded/
+decoded/*
 output/
 input/
+*.mkv
